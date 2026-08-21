@@ -16,6 +16,9 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      VITE_SUPABASE_URL: https://example.supabase.co
+      VITE_SUPABASE_PUBLISHABLE_KEY: public-test-key
 
     steps:
       - uses: actions/checkout@v4
