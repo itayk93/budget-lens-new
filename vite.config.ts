@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "node:fs";
 import { createClient } from "@supabase/supabase-js";
-import { componentTagger } from "lovable-tagger";
 import { VitePWA } from "vite-plugin-pwa";
 
 function readEnvFile(filePath: string) {
@@ -318,11 +317,10 @@ export default defineConfig(({ mode }) => ({
           });
         },
       },
-    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
 }));

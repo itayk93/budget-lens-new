@@ -95,6 +95,4 @@ not in the repository.
 
 ## License
 
-Copyright © 2026 Itay Karkason. All rights reserved. Viewing this public
-repository does not grant permission to use, copy, modify, distribute, or sell
-the code. See [LICENSE](./LICENSE).
+MIT — see [LICENSE](./LICENSE).
