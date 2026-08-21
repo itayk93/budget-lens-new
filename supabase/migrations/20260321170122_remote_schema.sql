@@ -1,0 +1,13 @@
+drop policy "No direct access to push_subscriptions" on "public"."push_subscriptions";
+drop policy "No direct access to push_system_config" on "public"."push_system_config";
+alter table "public"."push_subscriptions" drop constraint "push_subscriptions_pkey";
+drop index if exists "public"."push_subscriptions_pkey";
+alter table "public"."push_subscriptions" add column "id" uuid not null default gen_random_uuid();
+alter table "public"."push_system_config" alter column "id" set default 1;
+alter table "public"."push_system_config" alter column "id" set data type integer using "id"::integer;
+alter table "public"."push_system_config" alter column "vapid_private_key" set default ''::text;
+alter table "public"."push_system_config" alter column "vapid_public_key" set default ''::text;
+CREATE UNIQUE INDEX push_subscriptions_endpoint_key ON public.push_subscriptions USING btree (endpoint);
+CREATE UNIQUE INDEX push_subscriptions_pkey ON public.push_subscriptions USING btree (id);
+alter table "public"."push_subscriptions" add constraint "push_subscriptions_pkey" PRIMARY KEY using index "push_subscriptions_pkey";
+alter table "public"."push_subscriptions" add constraint "push_subscriptions_endpoint_key" UNIQUE using index "push_subscriptions_endpoint_key";

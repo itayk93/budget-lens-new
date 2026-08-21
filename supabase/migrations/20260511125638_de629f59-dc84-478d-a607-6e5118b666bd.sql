@@ -1,0 +1,11 @@
+-- Previously this migration seeded a live SFTP endpoint with a real hostname and
+-- a real corporate account name. That is deployment configuration, not schema,
+-- and it does not belong in a public repository.
+--
+-- Seed public.sftp_connections for your own environment instead, e.g.:
+--
+--   INSERT INTO public.sftp_connections (name, host, port, username, remote_directory, is_active)
+--   VALUES ('<name>', '<host>', 22, '<username>', '<remote dir>', true);
+--
+-- The matching password is stored as the SFTP_PASSWORD Edge Function secret.
+select 1;

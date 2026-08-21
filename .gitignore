@@ -1,0 +1,88 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.vite/
+*.local
+
+# Environment files — never commit real secrets
+.env
+.env.*
+!.env.example
+.env.supabase.local
+
+# Scraper profiles & session data
+.riseup-profile
+.riseup-profile/
+transactions-html/
+transactions-html
+israeli-bank-scrapers/
+israeli-bank-scrapers
+
+# Downloaded financial data and scraper debug artifacts
+*-download.json
+*-failure*.png
+cal-download.json
+cal-failure*.png
+max-download.json
+isracard-download.json
+yahav-download.json
+logs/
+max-failure*.png
+isracard-failure*.png
+yahav-failure*.png
+
+# Editor and assistant directories
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.agents/
+.cursor/
+.lovable/
+skills-lock.json
+.mcp.json
+.vscode/*
+!.vscode/extensions.json
+.idea
+.claude
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Supabase CLI cache
+supabase/.temp
+
+# Local/generated financial artifacts
+outputs/
+tmp/
+reports/
+
+# Food map pipeline output — real merchants, coordinates and amounts.
+# Generated locally and published to the owner's RLS-protected food_map_feed row.
+data/food-transactions.csv
+data/food-places.local.json
+data/geocode-cache.json
+data/geocode-audit.json
+public/food-places.json
+
+# Captures of live third-party account UIs (real balances on screen)
+docs/riseup_capture/
+reports/june-cashflow-gap-*.html
+reports/riseup-category-mismatches-*.html
+reports/transaction-gaps-*.html
+
+.vercel
+
+# Extracted from the standalone flight-globe page; personal travel history.
+data/flights.local.json

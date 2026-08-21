@@ -1,0 +1,65 @@
+// Auto-generated snapshot of the main user's category_order + shared targets.
+// Used as a fallback because the anon key can't read these tables under RLS.
+// Main cash flow: c30c2672 (תזרים ראשי). Main user: e3f6919b.
+export const MAIN_CASH_FLOW_ID = "c30c2672-2c39-4599-9e4e-0a536591a438";
+export const MAIN_USER_ID = "e3f6919b-d83b-4456-8325-676550a4382d";
+
+export type CategoryConfig = { displayOrder: number; sharedCategory: string | null; weeklyDisplay: boolean; monthlyTarget: number | null; useSharedTarget: boolean };
+export const CATEGORY_ORDER: Record<string, CategoryConfig> = {
+  "הוצאות משתנות": { displayOrder: 0, sharedCategory: null, weeklyDisplay: true, monthlyTarget: 2312.0, useSharedTarget: false },
+  "סופר": { displayOrder: 1, sharedCategory: null, weeklyDisplay: true, monthlyTarget: 968.0, useSharedTarget: false },
+  "רכב ותחבורה ציבורית": { displayOrder: 2, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 183.0, useSharedTarget: false },
+  "פארמה": { displayOrder: 3, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 167.0, useSharedTarget: false },
+  "טיסות לחו״ל": { displayOrder: 4, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 795.0, useSharedTarget: false },
+  "פנאי ובילויים": { displayOrder: 5, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 78.0, useSharedTarget: false },
+  "בתי קפה": { displayOrder: 6, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 178.0, useSharedTarget: false },
+  "קפסולות נספרסו": { displayOrder: 7, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 45.0, useSharedTarget: false },
+  "יין": { displayOrder: 8, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 147.0, useSharedTarget: false },
+  "מכונות אוטומטיות במשרד": { displayOrder: 9, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 48.0, useSharedTarget: false },
+  "חטיפים ואבקות חלבון": { displayOrder: 10, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 106.0, useSharedTarget: false },
+  "חסכון קרן כספית": { displayOrder: 11, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "טיול ביפן 🇯🇵": { displayOrder: 12, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "סטייק": { displayOrder: 13, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "אוכל בחוץ": { displayOrder: 14, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 559.0, useSharedTarget: false },
+  "RiseUp": { displayOrder: 15, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "ארנונה": { displayOrder: 16, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 786.0, useSharedTarget: false },
+  "גז": { displayOrder: 17, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 212.0, useSharedTarget: true },
+  "דיגיטל": { displayOrder: 18, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 111.0, useSharedTarget: true },
+  "דיור": { displayOrder: 19, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 8467.0, useSharedTarget: true },
+  "חשבונאי": { displayOrder: 20, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 117.0, useSharedTarget: false },
+  "מים": { displayOrder: 21, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 224.0, useSharedTarget: false },
+  "תקשורת": { displayOrder: 22, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 98.0, useSharedTarget: true },
+  "תשלומים": { displayOrder: 23, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 664.0, useSharedTarget: true },
+  "ביטוח": { displayOrder: 24, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "ביטוח רכב": { displayOrder: 25, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 2228.0, useSharedTarget: false },
+  "חשמל": { displayOrder: 26, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 241.0, useSharedTarget: false },
+  "שכר דירה סאבלט": { displayOrder: 27, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 2600.0, useSharedTarget: false },
+  "כושר": { displayOrder: 28, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 199.0, useSharedTarget: true },
+  "חדר כושר": { displayOrder: 29, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 160.0, useSharedTarget: true },
+  "כללי": { displayOrder: 30, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 597.0, useSharedTarget: true },
+  "עמלות": { displayOrder: 31, sharedCategory: "הוצאות קבועות", weeklyDisplay: false, monthlyTarget: 18.0, useSharedTarget: true },
+  "חסכון קבוע": { displayOrder: 32, sharedCategory: "הפקדות לחיסכון", weeklyDisplay: false, monthlyTarget: 1109.0, useSharedTarget: true },
+  "חסכון חד פעמי": { displayOrder: 33, sharedCategory: "הפקדות לחיסכון", weeklyDisplay: false, monthlyTarget: 1387.0, useSharedTarget: true },
+  "הכנסות קבועות": { displayOrder: 34, sharedCategory: "הכנסות", weeklyDisplay: false, monthlyTarget: 13687.0, useSharedTarget: true },
+  "הכנסות": { displayOrder: 35, sharedCategory: "הכנסות", weeklyDisplay: false, monthlyTarget: null, useSharedTarget: true },
+  "הכנסות משתנות": { displayOrder: 36, sharedCategory: "הכנסות", weeklyDisplay: false, monthlyTarget: 3797.0, useSharedTarget: true },
+  "הוצאות לא תזרימיות": { displayOrder: 37, sharedCategory: "לא בתזרים", weeklyDisplay: false, monthlyTarget: 18387.0, useSharedTarget: true },
+  "הכנסות לא תזרימיות": { displayOrder: 38, sharedCategory: "לא בתזרים", weeklyDisplay: false, monthlyTarget: 19591.0, useSharedTarget: true },
+  "דרום אפריקה 🇿🇦": { displayOrder: 39, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 2297.0, useSharedTarget: false },
+  "שיעורי איטלקית": { displayOrder: 40, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "ביגוד והנעלה": { displayOrder: 41, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "הוצאות תזרימיות": { displayOrder: 42, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "חופשה בסיציליה": { displayOrder: 43, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "טיסה לגרמניה 🇩🇪": { displayOrder: 44, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "ירח דבש": { displayOrder: 45, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 1827.0, useSharedTarget: false },
+  "ענייני חתונה": { displayOrder: 46, sharedCategory: null, weeklyDisplay: false, monthlyTarget: null, useSharedTarget: false },
+  "תזה 🤓": { displayOrder: 47, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 100.0, useSharedTarget: false },
+  "אחר": { displayOrder: 48, sharedCategory: null, weeklyDisplay: false, monthlyTarget: 263.0, useSharedTarget: false },
+};
+
+export const SHARED_TARGETS: Record<string, { monthlyTarget: number | null; weeklyDisplay: boolean }> = {
+  "הוצאות קבועות": { monthlyTarget: 10523.88, weeklyDisplay: false },
+  "הכנסות": { monthlyTarget: 21629.87, weeklyDisplay: false },
+  "הפקדות לחיסכון": { monthlyTarget: 3336.24, weeklyDisplay: false },
+  "לא בתזרים": { monthlyTarget: 33808.93, weeklyDisplay: false },
+};

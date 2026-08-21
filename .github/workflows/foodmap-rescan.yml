@@ -1,0 +1,56 @@
+name: Full food-map geocoding rescan
+
+on:
+  workflow_dispatch:
+
+# The scan no longer commits anything: the feed is personal data and goes
+# straight into the owner's RLS-protected food_map_feed row.
+permissions:
+  contents: read
+
+concurrency:
+  group: foodmap-full-rescan
+  cancel-in-progress: false
+
+jobs:
+  rescan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET: ${{ secrets.SUPABASE_SECRET }}
+      GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      FOOD_MAP_OWNER_EMAIL: ${{ secrets.FOOD_MAP_OWNER_EMAIL }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Require scoped scan credentials
+        shell: bash
+        run: |
+          test -n "$SUPABASE_URL" || { echo "Missing SUPABASE_URL repository secret"; exit 1; }
+          test -n "$SUPABASE_SECRET" || { echo "Missing SUPABASE_SECRET repository secret"; exit 1; }
+          test -n "$GOOGLE_MAPS_API_KEY" || { echo "Missing GOOGLE_MAPS_API_KEY repository secret"; exit 1; }
+          test -n "$FOOD_MAP_OWNER_EMAIL" || { echo "Missing FOOD_MAP_OWNER_EMAIL repository secret"; exit 1; }
+
+      - name: Refresh food transactions from Supabase
+        run: node scripts/foodmap/1-extract.mjs
+
+      - name: Re-geocode every merchant with Google Places
+        run: node scripts/foodmap/2-geocode.mjs --refresh
+
+      - name: Run food-map E2E contract
+        run: npm run foodmap:e2e
+
+      - name: Publish the feed to the owner's food_map_feed row
+        run: node scripts/foodmap/4-publish.mjs
