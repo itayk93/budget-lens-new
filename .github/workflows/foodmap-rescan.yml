@@ -23,12 +23,12 @@ jobs:
       FOOD_MAP_OWNER_EMAIL: ${{ secrets.FOOD_MAP_OWNER_EMAIL }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
